@@ -34,7 +34,7 @@ for file = csvfiles'
 end
 
 Xdat = M(:,1:end-1);
-Y    = M(:,end);
+y    = M(:,end);
 
 save('Xdat.mat','Xdat')
-save('Y.mat','Y')
+save('y.mat','y')

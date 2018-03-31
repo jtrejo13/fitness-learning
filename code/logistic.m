@@ -48,3 +48,5 @@ pause;
 pred = predictOneVsAll(all_theta, X_test);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y_test)) * 100);
+
+save('theta.mat','all_theta')

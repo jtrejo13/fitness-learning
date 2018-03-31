@@ -33,8 +33,10 @@ for file = csvfiles'
     M = [M; dat];
 end
 
-Xdat = M(:,1:end-1);
-y    = M(:,end);
+shuffledM = M(randperm(size(M,1)),:);
+
+Xdat = shuffledM(:,1:end-1);
+y    = shuffledM(:,end);
 
 save('Xdat.mat','Xdat')
 save('y.mat','y')

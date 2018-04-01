@@ -251,13 +251,13 @@
 				TargetAttributes = {
 					52AFB3931CEAD2D800BE33DC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5VP7YKPM9T;
+						DevelopmentTeam = C4VD5AD735;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					52AFB3B01CEAD2D800BE33DC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5VP7YKPM9T;
+						DevelopmentTeam = C4VD5AD735;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -267,7 +267,7 @@
 					};
 					52AFB3BF1CEAD2D800BE33DC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5VP7YKPM9T;
+						DevelopmentTeam = C4VD5AD735;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -505,10 +505,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5VP7YKPM9T;
+				DEVELOPMENT_TEAM = C4VD5AD735;
 				INFOPLIST_FILE = "MotionTracking WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../../Frameworks/";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fitness.learning.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitnesscompany.learning.watchkit.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -523,10 +523,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5VP7YKPM9T;
+				DEVELOPMENT_TEAM = C4VD5AD735;
 				INFOPLIST_FILE = "MotionTracking WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../../Frameworks/";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fitness.learning.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitnesscompany.learning.watchkit.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -542,10 +542,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MotionTracking WatchKit App/MotionTracking WatchKit App.entitlements";
-				DEVELOPMENT_TEAM = 5VP7YKPM9T;
+				DEVELOPMENT_TEAM = C4VD5AD735;
 				IBSC_MODULE = SwingWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "MotionTracking WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fruitcompany.orange;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitnesscompany.learning.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -560,10 +560,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MotionTracking WatchKit App/MotionTracking WatchKit App.entitlements";
-				DEVELOPMENT_TEAM = 5VP7YKPM9T;
+				DEVELOPMENT_TEAM = C4VD5AD735;
 				IBSC_MODULE = SwingWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "MotionTracking WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fruitcompany.orange;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitnesscompany.learning.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -578,10 +578,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MotionTracking/MotionTrackingExtension.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5VP7YKPM9T;
+				DEVELOPMENT_TEAM = C4VD5AD735;
 				INFOPLIST_FILE = "$(SRCROOT)/MotionTracking/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fitness.learning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitnesscompany.learning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -593,10 +593,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MotionTracking/MotionTrackingExtension.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5VP7YKPM9T;
+				DEVELOPMENT_TEAM = C4VD5AD735;
 				INFOPLIST_FILE = "$(SRCROOT)/MotionTracking/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fitness.learning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitnesscompany.learning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

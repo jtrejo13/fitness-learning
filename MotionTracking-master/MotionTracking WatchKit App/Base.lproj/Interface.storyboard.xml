@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -17,20 +17,25 @@
                             <color key="textColor" red="1" green="0.0" blue="0.029831843470767616" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                         </label>
-                        <label width="136" alignment="left" text="Gravity" id="H0m-N6-evH" userLabel="Gravity Label"/>
-                        <label alignment="left" text="0" id="MU2-hJ-tbM" userLabel="GravityValue">
+                        <label alignment="center" text="Workout Type 💪" id="B1K-50-FeK" userLabel="Workout Label"/>
+                        <label alignment="center" verticalAlignment="center" text="N/A" id="e26-OG-GML" userLabel="WorkoutValue">
+                            <color key="textColor" red="0.65196437920000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <label width="136" alignment="left" hidden="YES" text="Gravity" id="H0m-N6-evH" userLabel="Gravity Label"/>
+                        <label alignment="left" hidden="YES" text="0" id="MU2-hJ-tbM" userLabel="GravityValue">
                             <color key="textColor" red="0.085898444056510925" green="0.95968544483184814" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </label>
-                        <label alignment="left" text="User Acceleration" id="OPG-cU-Trd" userLabel="UALabel"/>
-                        <label alignment="left" text="0" id="2v7-yG-cfh" userLabel="UAValue">
+                        <label alignment="left" hidden="YES" text="User Acceleration" id="OPG-cU-Trd" userLabel="UALabel"/>
+                        <label alignment="left" hidden="YES" text="0" id="2v7-yG-cfh" userLabel="UAValue">
                             <color key="textColor" red="0.085898444059999995" green="0.95968544479999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </label>
-                        <label alignment="left" text="Rotation" id="PYT-9A-DzN" userLabel="RotationLabel"/>
-                        <label alignment="left" text="0" id="5PT-2G-Dgg" userLabel="RotationValue">
+                        <label alignment="left" hidden="YES" text="Rotation" id="PYT-9A-DzN" userLabel="RotationLabel"/>
+                        <label alignment="left" hidden="YES" text="0" id="5PT-2G-Dgg" userLabel="RotationValue">
                             <color key="textColor" red="0.085898444059999995" green="0.95968544479999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </label>
-                        <label alignment="left" text="Attitude" id="63n-R7-638" userLabel="AttitudeLabel"/>
-                        <label alignment="left" text="0" id="R4A-xH-fs5" userLabel="AttitudeValue">
+                        <label alignment="left" hidden="YES" text="Attitude" id="63n-R7-638" userLabel="AttitudeLabel"/>
+                        <label alignment="left" hidden="YES" text="0" id="R4A-xH-fs5" userLabel="AttitudeValue">
                             <color key="textColor" red="0.085898444059999995" green="0.95968544479999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </label>
                     </items>
@@ -54,6 +59,7 @@
                         <outlet property="rotationLabel" destination="5PT-2G-Dgg" id="AWR-Gi-B9r"/>
                         <outlet property="titleLabel" destination="bWr-ao-gMO" id="Jwr-l0-Q0U"/>
                         <outlet property="userAccelLabel" destination="2v7-yG-cfh" id="LL1-5Z-v0r"/>
+                        <outlet property="workoutLabel" destination="e26-OG-GML" id="YsW-Ex-lUQ"/>
                     </connections>
                 </controller>
             </objects>

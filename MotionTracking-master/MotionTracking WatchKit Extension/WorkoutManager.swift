@@ -15,7 +15,7 @@ import HealthKit
  These updates can be used to populate the user interface.
  */
 protocol WorkoutManagerDelegate: class {
-    func didUpdateMotion(_ manager: WorkoutManager, gravityStr: String, rotationRateStr: String, userAccelStr: String, attitudeStr: String)
+    func didUpdateMotion(_ manager: WorkoutManager, gravityStr: String, rotationRateStr: String, userAccelStr: String, attitudeStr: String, prediction:String)
 }
 
 class WorkoutManager: MotionManagerDelegate {
@@ -72,7 +72,7 @@ class WorkoutManager: MotionManagerDelegate {
 
     // MARK: MotionManagerDelegate
     
-    func didUpdateMotion(_ manager: MotionManager, gravityStr: String, rotationRateStr: String, userAccelStr: String, attitudeStr: String) {
-        delegate?.didUpdateMotion(self, gravityStr: gravityStr, rotationRateStr: rotationRateStr, userAccelStr: userAccelStr, attitudeStr: attitudeStr)
+    func didUpdateMotion(_ manager: MotionManager, gravityStr: String, rotationRateStr: String, userAccelStr: String, attitudeStr: String, prediction:String) {
+        delegate?.didUpdateMotion(self, gravityStr: gravityStr, rotationRateStr: rotationRateStr, userAccelStr: userAccelStr, attitudeStr: attitudeStr, prediction: prediction)
     }
 }

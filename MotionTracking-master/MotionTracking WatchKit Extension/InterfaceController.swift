@@ -16,6 +16,7 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
     let workoutManager = WorkoutManager()
     var active = false
     
+    var workoutStr = ""
     var gravityStr = ""
     var attitudeStr = ""
     var userAccelStr = ""
@@ -28,6 +29,7 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
     @IBOutlet weak var userAccelLabel: WKInterfaceLabel!
     @IBOutlet weak var rotationLabel: WKInterfaceLabel!
     @IBOutlet weak var attitudeLabel: WKInterfaceLabel!
+    @IBOutlet weak var workoutLabel: WKInterfaceLabel!
     
     // MARK: Initialization
     
@@ -65,12 +67,14 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
     }
 
     // MARK: WorkoutManagerDelegate
-    func didUpdateMotion(_ manager: WorkoutManager, gravityStr: String, rotationRateStr: String, userAccelStr: String, attitudeStr: String) {
+    func didUpdateMotion(_ manager: WorkoutManager, gravityStr: String, rotationRateStr: String, userAccelStr: String, attitudeStr: String, prediction:String) {
         DispatchQueue.main.async {
+            
             self.gravityStr = gravityStr
             self.userAccelStr = userAccelStr
             self.rotationRateStr = rotationRateStr
             self.attitudeStr = attitudeStr
+            self.workoutStr = prediction
             self.updateLabels();
         }
     }
@@ -82,6 +86,7 @@ class InterfaceController: WKInterfaceController, WorkoutManagerDelegate {
             userAccelLabel.setText(userAccelStr)
             rotationLabel.setText(rotationRateStr)
             attitudeLabel.setText(attitudeStr)
+            workoutLabel.setText(workoutStr)
         }
     }
 

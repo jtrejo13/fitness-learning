@@ -13,8 +13,6 @@ num_labels = 4;           % 4 labels. Eliptical=1, Pushups=2, Rowing=3,
 %% =========== Loading, Processing and Visualizing Data =============
 %  Loading and visualizing the dataset.
 
-
-
 % % Load Training Data
 % fprintf('Loading and Visualizing Data ...\n')
 % 

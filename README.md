@@ -71,15 +71,15 @@ regularization.
 ### Features and Labels
 
 For our model, we used 13 features, which are the [raw accelerometer events](https://developer.apple.com/documentation/coremotion/getting_raw_accelerometer_events) logged by the Apple Watch:
-- attitude_roll [radians]
-- attitude_pitch [radians]
--	attitude_yaw [radians]
--	rotation_rate (x, y, z)[radians/s]
--	gravity (x, y, z)[G],
-- user_acc (x, y, z)[G]
+  - attitude_roll [radians]
+  - attitude_pitch [radians]
+  -	attitude_yaw [radians]
+  -	rotation_rate (x, y, z)[radians/s]
+  -	gravity (x, y, z)[G],
+  - user_acc (x, y, z)[G]
 
 Our data consisted of 4 types of activity: rowing, elliptical, push ups, and treadmill, so our outcome labels were classified as follows:
-- Elliptical=1, Pushups=2, Rowing=3, Treadmill=4
+  - Elliptical=1, Pushups=2, Rowing=3, Treadmill=4
 
 ### Accuracy
 
@@ -93,35 +93,35 @@ After splitting the input data into a 70% Training and 30% Test data, our classi
 
 This project made use of the following tools:
 
-* Apple Watch Development
-- Xcode
-- Swift
+* **Apple Watch Development**
+  - Xcode
+  - Swift
 
 * Data Parsing
-- Python
-- Jupyter
-- Matplotlib
-- Numpy
+  - Python
+  - Jupyter
+  - Matplotlib
+  - NumPy
 
 * Logistic Classifier
-- MATLAB
+  - MATLAB
 
 ## Authors
 
-* Carlos Trejo
-- [GitHub](https://github.com/cdt876)
-- [LinkedIn](https://www.linkedin.com/in/carlostrejomtz/)
-- [Home](https://cdt876.github.io)
+* **Carlos Trejo**
+  - [GitHub](https://github.com/cdt876)
+  - [LinkedIn](https://www.linkedin.com/in/carlostrejomtz/)
+  - [Home](https://cdt876.github.io)
 
-* Juan Trejo
-- [GitHub](https://github.com/jtrejo13)
-- [LinkedIn](https://www.linkedin.com/in/jtrejo13/)
-- [Home](https://jtrejo13.github.io/)
+* **Juan Trejo**
+  - [GitHub](https://github.com/jtrejo13)
+  - [LinkedIn](https://www.linkedin.com/in/jtrejo13/)
+  - [Home](https://jtrejo13.github.io/)
 
-* Yu Lu
-- [GitHub](https://github.com/SuperYuLu)
-- [LinkedIn](https://www.linkedin.com/in/yu-lu-12b123a6/)
-- [Home](https://superyulu.github.io/)
+* **Yu Lu**
+  - [GitHub](https://github.com/SuperYuLu)
+  - [LinkedIn](https://www.linkedin.com/in/yu-lu-12b123a6/)
+  - [Home](https://superyulu.github.io/)
 
 ## License
 

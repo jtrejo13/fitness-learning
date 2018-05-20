@@ -97,13 +97,13 @@ This project made use of the following tools:
   - Xcode
   - Swift
 
-* Data Parsing
+* **Data Parsing**
   - Python
   - Jupyter
   - Matplotlib
   - NumPy
 
-* Logistic Classifier
+* **Logistic Classifier**
   - MATLAB
 
 ## Authors

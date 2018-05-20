@@ -48,13 +48,13 @@ A Logistic Regression classifier was trained and tested using the accelerometer 
 
 * **logistic.m**: The main script. Process data, trains and tests a logistic regression model, and outputs a coefficients matrix.
 
-* **dataprocess.m**: A script that compiles accelerometer data from the .csv files found in \\data and splits it into an nxm matrix of inputs, called X, and an nx1 labels matrix, Y. The matrices are also shuffled before being expororted into their corresponding .mat file.
+* **dataprocess.m**: A script that compiles accelerometer data from the .csv files found in \\data and splits it into an `nxm` matrix of features, called X, and an `nx1` labels matrix, Y. The matrices are also shuffled before being exported into their corresponding .mat file.
 
 * **splitData.m**: A function to split matrices X and Y into a training set and a test set, based on the passed 'training ratio'.
 
 * **oneVsAll.m**: Function trains multiple logistic regression classifiers and returns all the classifiers in a matrix all_theta, where the i-th row of all_theta corresponds to the classifier for label i.
 
-* **predictOneVsAll.m**: Predict the label for a trained one-vs-all classifier. The labels are in the range 1..K, where K = size(all_theta, 1)
+* **predictOneVsAll.m**: Predict the label for a trained one-vs-all classifier. The labels are in the range 1..K, where `K = size(all_theta, 1)`
 
 * **fmincg.m**: Function that allows us to find the minimum point in our cost function.
 
@@ -63,7 +63,22 @@ regularization.
 
 * **sigmod.m**: Evaluates the sigmoid function at a given point.
 
+## Features and Labels
 
+For our model, we used 13 features, which are the [raw accelerometer events](https://developer.apple.com/documentation/coremotion/getting_raw_accelerometer_events) logged by the Apple Watch:
+- attitude_roll [radians]
+- attitude_pitch [radians]
+-	attitude_yaw [radians]
+-	rotation_rate (x, y, z)[radians/s]
+-	gravity (x, y, z)[G],
+- user_acc (x, y, z)[G]
+
+Our data consisted of 4 types of activity: rowing, elliptical, push ups, and treadmill, so our outcome labels were classified as follows:
+- Elliptical=1, Pushups=2, Rowing=3, Treadmill=4
+
+## Accuracy
+
+After splitting the input data into a 70% Training and 30% Test data, our classifier achieved an accuracy of **94.12%**
 
 ## Apple watch app dev   
 

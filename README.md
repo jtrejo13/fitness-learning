@@ -1,6 +1,16 @@
-# Fitness Learning  Trejo
+# MyFitnessPal
 ----  
-A light weight apple watch app with real time recognition of workout categories with pretrained machine learning algorithm.
+MyFitnessPal is a light weight Apple Watch app with real time recognition of workout categories with pre-trained machine learning algorithm. It allows exercise aficionados to track their workout without having to enter the exercise set manually.
+
+MyFitnessPal uses Core Motion from Apple's Library, to collect data from the Apple Watch accelerometer and gyroscope plus a machine learning model that can automatically categorize and log an exercise from the collected motion data. As of now, the app can identify the following traditional workouts: Elliptical, rowing machine, treadmill and pushups.
+
+## Screenshots
+
+<img src="/res/home.jpg" alt="Home Screen"></img>
+<img src="/res/loading.jpg" alt="Loading Screen"></img>
+<img src="/res/start_stop.jpg" alt="Start or Stop Workout"></img>
+<img src="/res/pushups.jpg" alt="Pushups Example"></img>
+<img src="/res/elliptical.jpg" alt="Elliptical Example"></img>
 
 ## Motivation  
 While apple watch provide fitness data monitoring and analysis, it relies on users to manually input the workout category to track. It'll be much more user-friendly if apple watch could automatically detect and categorize the type of workout in the real time.
@@ -8,7 +18,7 @@ While apple watch provide fitness data monitoring and analysis, it relies on use
 ## Data Acquisition  
 
 ### PowerSense
-Data was collected directly from the Apple Watch and with the assitance of a third party application called [PowerSense](https://itunes.apple.com/us/app/powersense-motion-sensor-data-logging-tool/id1050491381?mt=8),which is a free app on apple stores and the main reason we use it is that it provide high sampling rate of data collection. According to the App store description:  
+Data was collected directly from the Apple Watch and with the assistance of a third party application called [PowerSense](https://itunes.apple.com/us/app/powersense-motion-sensor-data-logging-tool/id1050491381?mt=8),which is a free app on apple stores and the main reason we use it is that it provide high sampling rate of data collection. According to the App store description:  
 
 > PowerSense is a powerful motion sensor logging tool that can track and record various sensor data on your iPhone and Apple Watch. These sensors include accelerometer, gyroscope, magnetometer, etc. The recorded data is stored as XML/csv files and can be then sent out via email, AirDrop to your Mac or upload to your linked Dropbox account.  
 

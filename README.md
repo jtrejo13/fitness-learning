@@ -5,8 +5,35 @@ A light weight apple watch app with real time recognition of workout categories 
 ## Motivation  
 While apple watch provide fitness data monitoring and analysis, it relies on users to manually input the workout category to track. It'll be much more user-friendly if apple watch could automatically detect and categorize the type of workout in the real time. 
 
-## Data  
-Data was collected directly from the Apple Watch and with the assitance of a third party application called PowerSense. The data included accelerometer measurements, heart rate and calorie count
+## Data Acquisition  
+
+### PowerSense
+Data was collected directly from the Apple Watch and with the assitance of a third party application called [PowerSense](https://itunes.apple.com/us/app/powersense-motion-sensor-data-logging-tool/id1050491381?mt=8),which is a free app on apple stores and the main reason we use it is that it provide high sampling rate of data collection. According to the App store description:  
+
+> PowerSense is a powerful motion sensor logging tool that can track and record various sensor data on your iPhone and Apple Watch. These sensors include accelerometer, gyroscope, magnetometer, etc. The recorded data is stored as XML/csv files and can be then sent out via email, AirDrop to your Mac or upload to your linked Dropbox account.  
+
+In our purpose of training the ML model, we use XML file as saved by the *PowerSense* app, since that gives more information. 
+
+
+### Export your own training data  
+Although not required, you may want to train the model by using your own workout data. Here is how: 
+**To be added** *Describe how to use PowerSense to get export the data we want*  
+
+You can configure the sampling rate to be from 1 to 100 Hz for phone. 50 Hz is fixed for watch.
+
+### XML Data Parser 
+
+
+
+- Included data types:  
+  + Accelerometer measurements
+  + Heart rate
+  + Calorie count
+  
+- Data format 
+  + XML element tree 
+  
+
 
 
 ## Feature selection  

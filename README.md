@@ -132,6 +132,50 @@ After splitting the input data into a 70% Training and 30% Test data, our classi
 
 ## Apple Watch App   
 
+We built a light weight Apple Watch app with real time recognition of workout categories with pre-trained machine learning algorithm. It allows exercise aficionados to track their workout without having to enter the exercise set manually.
+
+The app uses Core Motion from Apple's Library, to collect data from the Apple Watch accelerometer and gyroscope plus a machine learning model that can automatically categorize and log an exercise from the collected motion data. As of now, the app can identify the following traditional workouts: Elliptical, rowing machine, treadmill and pushups.
+
+### Screenshots
+
+The following are screenshots that show every watch face the user will see before and during the workout.
+
+<table width="500" cellspacing="0" cellpadding="0" style="border: none;">
+<tr>
+<td align="center" valign="center">
+<img src="/res/loading.jpg" alt="Loading Screen" width="200" height="250"></img>
+<br />
+MyFitnessPal loading screen
+</td>
+<td align="center" valign="center">
+<img src="/res/notrecording.jpg" alt="Home Screen" width="200" height="250"></img>
+<br />
+View before user starts workout
+</td>
+<td align="center" valign="center">
+<img src="/res/start_stop.jpg" alt="Start or Stop Workout" width="200" height="250"></img>
+<br />
+Start and stop workout button options
+</td>
+</tr>
+<tr>
+<td align="center" valign="center">
+<img src="/res/pushups.jpg" alt="Pushups Example" width="200" height="250"></img>
+<br />
+Pushups workout view
+</td>
+<td align="center" valign="center">
+<img src="/res/elliptical.jpg" alt="Elliptical Example" width="200" height="250"></img>
+<br />
+Elliptical workout view
+</td>
+<td align="center" valign="center">
+<img src="/res/rowing.jpg" alt="Rowing Example" width="200" height="250"></img>
+<br />
+Rowing workout view
+</td>
+</tr>
+</table>
 
 ## Tools
 

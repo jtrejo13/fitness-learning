@@ -1,9 +1,9 @@
 # Fitness Learning  
 ----  
-A light weight apple watch app with real time recognition of workout categories with pretrained machine learning algorithm. 
+A light weight apple watch app with real time recognition of workout categories with pretrained machine learning algorithm.
 
 ## Motivation  
-While apple watch provide fitness data monitoring and analysis, it relies on users to manually input the workout category to track. It'll be much more user-friendly if apple watch could automatically detect and categorize the type of workout in the real time. 
+While apple watch provide fitness data monitoring and analysis, it relies on users to manually input the workout category to track. It'll be much more user-friendly if apple watch could automatically detect and categorize the type of workout in the real time.
 
 ## Data Acquisition  
 
@@ -12,16 +12,16 @@ Data was collected directly from the Apple Watch and with the assitance of a thi
 
 > PowerSense is a powerful motion sensor logging tool that can track and record various sensor data on your iPhone and Apple Watch. These sensors include accelerometer, gyroscope, magnetometer, etc. The recorded data is stored as XML/csv files and can be then sent out via email, AirDrop to your Mac or upload to your linked Dropbox account.  
 
-In our purpose of training the ML model, we use XML file as saved by the *PowerSense* app, since that gives more information. 
+In our purpose of training the ML model, we use XML file as saved by the *PowerSense* app, since that gives more information.
 
 
 ### Export your own training data  
-Although not required, you may want to train the model by using your own workout data. Here is how: 
+Although not required, you may want to train the model by using your own workout data. Here is how:
 **To be added** *Describe how to use PowerSense to get export the data we want*  
 
 You can configure the sampling rate to be from 1 to 100 Hz for phone. 50 Hz is fixed for watch.
 
-### XML Data Parser 
+### XML Data Parser
 
 
 
@@ -29,10 +29,10 @@ You can configure the sampling rate to be from 1 to 100 Hz for phone. 50 Hz is f
   + Accelerometer measurements
   + Heart rate
   + Calorie count
-  
-- Data format 
-  + XML element tree 
-  
+
+- Data format
+  + XML element tree
+
 
 
 
@@ -41,9 +41,10 @@ We first looked in the the data directly exported from apple watch program, whic
 
 As can be seen for the juypter notebook for analysis, the data was very noisy and, most importantly, has poor time resolution ( ~ 1 min per measuremnet) . From here we decide not using heart rate and calorie count as the features, but using the accelerometer measurements data, which can give us very high measurement resolution (50Hz sampling rate, every 0.02s per measurement).   
 
-## Maching Learnig Model Training 
+## Machine Learning Model Training
+
+
 
 ## Apple watch app dev   
 
 ## Real time testing   
-

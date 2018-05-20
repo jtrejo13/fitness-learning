@@ -37,6 +37,11 @@ Pushups workout view
 <br />
 Elliptical workout view
 </td>
+<td align="center" valign="center">
+<img src="/res/rowing.jpg" alt="Rowing Example" width="200" height="250"></img>
+<br />
+Rowing workout view
+</td>
 </tr>
 </table>
 

@@ -13,29 +13,29 @@ The following are screenshots that show every watch face the user will see befor
 <td align="center" valign="center">
 <img src="/res/loading.jpg" alt="Loading Screen" width="200" height="250"></img>
 <br />
-Caption text centered under the image.
+MyFitnessPal loading screen
 </td>
 <td align="center" valign="center">
 <img src="/res/notrecording.jpg" alt="Home Screen" width="200" height="250"></img>
 <br />
-Caption text centered under the image.
+View before user starts workout
 </td>
 <td align="center" valign="center">
 <img src="/res/start_stop.jpg" alt="Start or Stop Workout" width="200" height="250"></img>
 <br />
-Caption text centered under the image.
+Start and stop workout button options
 </td>
 </tr>
 <tr>
 <td align="center" valign="center">
 <img src="/res/pushups.jpg" alt="Pushups Example" width="200" height="250"></img>
 <br />
-Caption text centered under the image.
+Pushups workout view
 </td>
 <td align="center" valign="center">
 <img src="/res/elliptical.jpg" alt="Elliptical Example" width="200" height="250"></img>
 <br />
-Caption text centered under the image.
+Elliptical workout view
 </td>
 </tr>
 </table>

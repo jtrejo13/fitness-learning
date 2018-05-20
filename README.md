@@ -8,15 +8,31 @@ MyFitnessPal uses Core Motion from Apple's Library, to collect data from the App
 
 The following are screenshots that show every watch face the user will see before and during the workout.
 
-<div class="row" style="display:flex; flex-wrap: wrap; padding: 0 4px;">
-<img src="/res/loading.jpg" alt="Loading Screen" width="200" height="250"></img>
-<img src="/res/notrecording.jpg" alt="Home Screen" width="200" height="250"></img>
-<img src="/res/start_stop.jpg" alt="Start or Stop Workout" width="200" height="250"></img>
+<div class="wrapper">
+<div class="box"><img src="/res/loading.jpg" alt="Loading Screen" width="200" height="250"></img></div>
+<div class="box"><img src="/res/notrecording.jpg" alt="Home Screen" width="200" height="250"></img></div>
+<div class="box"><img src="/res/start_stop.jpg" alt="Start or Stop Workout" width="200" height="250"></img></div>
+<div class="box"><img src="/res/pushups.jpg" alt="Pushups Example" width="200" height="250"></img></div>
+<div class="box"><img src="/res/elliptical.jpg" alt="Elliptical Example" width="200" height="250"></img></div>
 </div>
-<div class="row" style="display:flex; flex-wrap: wrap; padding: 0 4px; margin-top: 50px;">
-<img src="/res/pushups.jpg" alt="Pushups Example" width="200" height="250"></img>
-<img src="/res/elliptical.jpg" alt="Elliptical Example" width="200" height="250"></img>
-</div>
+
+<style>
+.wrapper {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+</style>
 
 ## Motivation  
 While apple watch provide fitness data monitoring and analysis, it relies on users to manually input the workout category to track. It'll be much more user-friendly if apple watch could automatically detect and categorize the type of workout in the real time.

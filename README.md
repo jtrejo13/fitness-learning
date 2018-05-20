@@ -1,5 +1,17 @@
-# Fitness Learning  
-----  
+# Fitness Learning
+----
+## Table of Contents
+- [About](#about)
+- [Data](#data)
+- [Logistic Classifier](#logistic-classifier)
+- [Watch App](#watch-app)
+- [Running the App](#running-the-app)
+- [Tools](#tools)
+- [Authors](#authors)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## About  
 A light weight apple watch app with real time recognition of workout categories with pretrained machine learning algorithm.
 
 ## Motivation  
@@ -14,7 +26,6 @@ Data was collected directly from the Apple Watch and with the assitance of a thi
 
 In our purpose of training the ML model, we use XML file as saved by the *PowerSense* app, since that gives more information.
 
-
 ### Export your own training data  
 Although not required, you may want to train the model by using your own workout data. Here is how:
 **To be added** *Describe how to use PowerSense to get export the data we want*  
@@ -22,8 +33,6 @@ Although not required, you may want to train the model by using your own workout
 You can configure the sampling rate to be from 1 to 100 Hz for phone. 50 Hz is fixed for watch.
 
 ### XML Data Parser
-
-
 
 - Included data types:  
   + Accelerometer measurements
@@ -33,14 +42,10 @@ You can configure the sampling rate to be from 1 to 100 Hz for phone. 50 Hz is f
 - Data format
   + XML element tree
 
-
-
-
 ## Feature selection  
 We first looked in the the data directly exported from apple watch program, which include heart rate, calorie count, etc. The raw data was in XML file format and has many sub-categories. WE set up python notebooks to extract the data we want, clean the data and reformat it into different CSV files by using pands. Then we looked in to heart rate and calories for different workouts, trying to decide whether we will using it as our feature for later model training using machine algorithm.   
 
 As can be seen for the juypter notebook for analysis, the data was very noisy and, most importantly, has poor time resolution ( ~ 1 min per measuremnet) . From here we decide not using heart rate and calorie count as the features, but using the accelerometer measurements data, which can give us very high measurement resolution (50Hz sampling rate, every 0.02s per measurement).   
-
 
 ## Logistic Classifier
 
@@ -63,7 +68,7 @@ regularization.
 
 * **sigmod.m**: Evaluates the sigmoid function at a given point.
 
-## Features and Labels
+### Features and Labels
 
 For our model, we used 13 features, which are the [raw accelerometer events](https://developer.apple.com/documentation/coremotion/getting_raw_accelerometer_events) logged by the Apple Watch:
 - attitude_roll [radians]
@@ -76,10 +81,52 @@ For our model, we used 13 features, which are the [raw accelerometer events](htt
 Our data consisted of 4 types of activity: rowing, elliptical, push ups, and treadmill, so our outcome labels were classified as follows:
 - Elliptical=1, Pushups=2, Rowing=3, Treadmill=4
 
-## Accuracy
+### Accuracy
 
 After splitting the input data into a 70% Training and 30% Test data, our classifier achieved an accuracy of **94.12%**
 
 ## Apple watch app dev   
 
-## Real time testing   
+## Real time testing
+
+## Tools
+
+This project made use of the following tools:
+
+* Apple Watch Development
+- Xcode
+- Swift
+
+* Data Parsing
+- Python
+- Jupyter
+- Matplotlib
+- Numpy
+
+* Logistic Classifier
+- MATLAB
+
+## Authors
+
+* Carlos Trejo
+- [GitHub](https://github.com/cdt876)
+- [LinkedIn](https://www.linkedin.com/in/carlostrejomtz/)
+- [Home](https://cdt876.github.io)
+
+* Juan Trejo
+- [GitHub](https://github.com/jtrejo13)
+- [LinkedIn](https://www.linkedin.com/in/jtrejo13/)
+- [Home](https://jtrejo13.github.io/)
+
+* Yu Lu
+- [GitHub](https://github.com/SuperYuLu)
+- [LinkedIn](https://www.linkedin.com/in/yu-lu-12b123a6/)
+- [Home](https://superyulu.github.io/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgements
+* [PowerSense](https://itunes.apple.com/us/app/powersense-motion-sensor-data-logging-tool/id1050491381?mt=8) to collect raw accelerometer vents from the Apple Watch
+* [Eric Hsiao](https://github.com/hsiaoer) for providing a [template](https://github.com/hsiaoer/MotionTracking) that served as the base for our Apple Watch app

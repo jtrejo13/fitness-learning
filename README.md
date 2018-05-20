@@ -15,25 +15,23 @@ The following are screenshots that show every watch face the user will see befor
 <br />
 Caption text centered under the image.
 </td>
-<tr>
 <td align="center" valign="center">
 <img src="/res/notrecording.jpg" alt="Home Screen" width="200" height="250"></img>
 <br />
 Caption text centered under the image.
 </td>
-<tr>
 <td align="center" valign="center">
 <img src="/res/start_stop.jpg" alt="Start or Stop Workout" width="200" height="250"></img>
 <br />
 Caption text centered under the image.
 </td>
+</tr>
 <tr>
 <td align="center" valign="center">
 <img src="/res/pushups.jpg" alt="Pushups Example" width="200" height="250"></img>
 <br />
 Caption text centered under the image.
 </td>
-<tr>
 <td align="center" valign="center">
 <img src="/res/elliptical.jpg" alt="Elliptical Example" width="200" height="250"></img>
 <br />

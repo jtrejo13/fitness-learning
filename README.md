@@ -1,4 +1,4 @@
-# Fitness Learning  Carlos
+# Fitness Learning  Trejo
 ----  
 A light weight apple watch app with real time recognition of workout categories with pretrained machine learning algorithm.
 

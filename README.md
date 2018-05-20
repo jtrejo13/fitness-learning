@@ -41,7 +41,27 @@ We first looked in the the data directly exported from apple watch program, whic
 
 As can be seen for the juypter notebook for analysis, the data was very noisy and, most importantly, has poor time resolution ( ~ 1 min per measuremnet) . From here we decide not using heart rate and calorie count as the features, but using the accelerometer measurements data, which can give us very high measurement resolution (50Hz sampling rate, every 0.02s per measurement).   
 
-## Machine Learning Model Training
+
+## Logistic Classifier
+
+A Logistic Regression classifier was trained and tested using the accelerometer data collected to predict the type of activity being performed by the user. The classifier was built in MATLAB and is composed of the following files:
+
+* **logistic.m**: The main script. Process data, trains and tests a logistic regression model, and outputs a coefficients matrix.
+
+* **dataprocess.m**: A script that compiles accelerometer data from the .csv files found in \\data and splits it into an nxm matrix of inputs, called X, and an nx1 labels matrix, Y. The matrices are also shuffled before being expororted into their corresponding .mat file.
+
+* **splitData.m**: A function to split matrices X and Y into a training set and a test set, based on the passed 'training ratio'.
+
+* **oneVsAll.m**: Function trains multiple logistic regression classifiers and returns all the classifiers in a matrix all_theta, where the i-th row of all_theta corresponds to the classifier for label i.
+
+* **predictOneVsAll.m**: Predict the label for a trained one-vs-all classifier. The labels are in the range 1..K, where K = size(all_theta, 1)
+
+* **fmincg.m**: Function that allows us to find the minimum point in our cost function.
+
+* **lrCostFunction.m**: Computes the cost and gradient for logistic regression with
+regularization.
+
+* **sigmod.m**: Evaluates the sigmoid function at a given point.
 
 
 

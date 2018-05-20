@@ -7,7 +7,7 @@ dataprocess
 %% =========== Parameters =============
 X = Xdat(:, 2:end);
 input_layer_size = 13;    % 13 features
-num_labels = 4;           % 4 labels. Eliptical=1, Pushups=2, Rowing=3,
+num_labels = 4;           % 4 labels. Elliptical=1, Pushups=2, Rowing=3,
                           % Treadmill=4
 
 %% =========== Loading, Processing and Visualizing Data =============

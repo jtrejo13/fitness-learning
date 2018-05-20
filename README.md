@@ -6,14 +6,16 @@ MyFitnessPal uses Core Motion from Apple's Library, to collect data from the App
 
 ## Screenshots
 
-The following are screenshots that show exactly what the
+The following are screenshots that show every watch face the user will see before and during the workout.
 
 <div class="row" style="display:flex; flex-wrap: wrap; padding: 0 4px;">
-<img src="/res/loading.jpg" alt="Loading Screen" width="50" height="50"></img>
-<img src="/res/notrecording.jpg" alt="Home Screen" width="50" height="50"></img>
-<img src="/res/start_stop.jpg" alt="Start or Stop Workout" width="50" height="50"></img>
-<img src="/res/pushups.jpg" alt="Pushups Example" width="50" height="50"></img>
-<img src="/res/elliptical.jpg" alt="Elliptical Example" width="50" height="50"></img>
+<img src="/res/loading.jpg" alt="Loading Screen" width="150" height="150"></img>
+<img src="/res/notrecording.jpg" alt="Home Screen" width="150" height="150"></img>
+<img src="/res/start_stop.jpg" alt="Start or Stop Workout" width="150" height="150"></img>
+</div>
+<div class="row" style="display:flex; flex-wrap: wrap; padding: 0 4px;">
+<img src="/res/pushups.jpg" alt="Pushups Example" width="150" height="150"></img>
+<img src="/res/elliptical.jpg" alt="Elliptical Example" width="150" height="150"></img>
 </div>
 
 ## Motivation  

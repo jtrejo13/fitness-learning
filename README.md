@@ -17,6 +17,81 @@ A light weight apple watch app with real time recognition of workout categories 
 ## Motivation  
 While apple watch provide fitness data monitoring and analysis, it relies on users to manually input the workout category to track. It'll be much more user-friendly if apple watch could automatically detect and categorize the type of workout in the real time.
 
+
+# Data   
+
+## Data Acquisition  
+Data was collected directly from the Apple Watch and with the assitance of a third party application called [PowerSense](https://itunes.apple.com/us/app/powersense-motion-sensor-data-logging-tool/id1050491381?mt=8),which is a free and powerful motion sensor logging tool that can track and record various sensor data on iPhone and Apple Watch. The main reason we use it is that it provides high sampling rate of data collection. To get more details of the workout, we suggest export the data as XML files, then use the XMLParser to extract interested workout types and export it as csv files for later analysis.
+
+Getting workout data can be simple by using *PowerSense*:  
+```
+Setup sampling rate (e.g. 50 Hz) --> click start -- > start workout --> click stop --> export files  
+```
+
+## Data Parsing   
+Data of interest is parsed from the raw xml files export from *PowerSense*, using our own python module XMLParser:
+
+Dependencies  
++ pandas 
++ xml
++ numpy 
++ matplotlib 
+
+
+Initialize  
+```python
+from XMLParser import Parser  
+par = Parser("/path/to/file.xml", startDate = "format like 2018-12-01")  
+```
+
+List recorded workout types:  
+```python
+# In: 
+par.listTypes  
+# Out:
+array(['HKCategoryTypeIdentifierAppleStandHour',
+       'HKQuantityTypeIdentifierActiveEnergyBurned',
+       'HKQuantityTypeIdentifierAppleExerciseTime',
+       'HKQuantityTypeIdentifierBasalEnergyBurned',
+       'HKQuantityTypeIdentifierDistanceWalkingRunning',
+       'HKQuantityTypeIdentifierHeartRate',
+       'HKQuantityTypeIdentifierHeartRateVariabilitySDNN',
+       'HKQuantityTypeIdentifierRestingHeartRate',
+       'HKQuantityTypeIdentifierStepCount',
+       'HKQuantityTypeIdentifierWalkingHeartRateAverage'], dtype='<U48')
+```
+
+Extract workout summary:   
+
+```
+# In: 
+par.loadWorkOutSummary()  
+# Out:
+                 ActivityType           Duration              EndTime  \
+0                   Elliptical  5.665340749422709  2018-03-31 09:49:03   
+1                       Rowing  5.387559982140859  2018-03-31 09:58:07   
+2  TraditionalStrengthTraining  3.668238099416097  2018-03-31 10:04:51   
+3                      Walking  5.929301750659943  2018-03-31 10:14:32   
+
+             StartTime  
+0  2018-03-31 09:43:23  
+1  2018-03-31 09:52:44  
+2  2018-03-31 10:01:11  
+3  2018-03-31 10:08:36  
+
+```
+
+Load a specific workout data:  
+```python
+# In:
+par.loadTypeData('HeartRate', plot = False, to_csv = False)
+# Out:
+#pandas dataframe with columns
+Index(['StartTime', 'EndTime', 'HeartRate', 'units'], dtype='object')
+```
+## Feature Selection  
+Features saved by apple watch include 'HeartRate', 'ActiveEnergyBurned', 'BasalEnergyBurned', 'DistanceWalkingRunning', and accelerometer measurements (X, Y, Z axis). Explortary data analysis (as in jupyterNotebook) shows that data for 'HeartRate', 'ActiveEnergyBurned', 'BasalEnergyBurned', 'DistanceWalkingRunning' are very noisey and not easily distinguisiable, we focus on the accelerometer data along 3 directions as our selected features and model input. The idea is that accelerometer motion of apple watch should contain enough information for most workouts with arm movement. 
+
 ## Data Acquisition  
 
 ### PowerSense

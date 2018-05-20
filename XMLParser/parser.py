@@ -9,17 +9,40 @@
 # 
 # Created: Sun May 20 13:16:00 2018 (-0500)
 # Version: 
-# Last-Updated: Sun May 20 13:48:55 2018 (-0500)
+# Last-Updated: Sun May 20 14:32:11 2018 (-0500)
 #           By: yulu
-#     Update #: 24
+#     Update #: 44
 # 
 import numpy as np 
 import pandas as pd 
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import xml.etree.ElementTree as ET
 
 
 class Parser:
+    """
+    Class Parser
+    -------------
+    Read in XML file of watch workout data from *PowerSence* app, extract wanted work types
+    and export as csv files or plot the result
+    
+    Input
+    ------------
+    fileName: filename (including path) to export xml file from apple watch app *PowerSense"
+    startDate: Specify start date of the data wanted, format example: 2018-12-01
+    
+    Properties
+    ------------
+    * listTypes: list avaliable workout types recorded in the xml file 
+
+    Methods
+    ------------
+    * loadWorkOutSummary: list summary report on the workout data in the xml file
+    * loadTypeDate: load the data of specific type of workout and return a pandas dataframe
+    * to_csv: save loaded data to csv 
+
+    """
+
     factors = {
         'ActiveEnergyBurned':'HKQuantityTypeIdentifierActiveEnergyBurned' ,
         'BasalEnergyBurned': 'HKQuantityTypeIdentifierBasalEnergyBurned',
@@ -35,12 +58,18 @@ class Parser:
     
     @staticmethod
     def _gen_element_tree_root(fileName):
+        """
+        initialize xml elementary tree root obj
+        """
         tree = ET.parse(fileName)
         tree_root =  tree.getroot()
         return tree_root
 
     @property
     def listTypes(self):
+        """
+        List avaliable work out type data in the xml file
+        """
         types = []
         for r in self.treeroot.findall('Record'):
             date = r.attrib['startDate'][:10]
@@ -50,7 +79,10 @@ class Parser:
                 return(np.unique(types))
 
 
-    def loadTypeData(root, typeName):
+    def loadTypeData(self, typeName, plot = False, as_csv = False):
+        """
+        load data for specifice type of workout
+        """
         startTime, endTime, units, values = [], [], [], []
         factors = self.factors
         for r in self.tree_root.findall('Record'):
@@ -74,9 +106,17 @@ class Parser:
         data.iloc[:,2] = tempData[typeName]
         data.iloc[:,3] = tempData['units']
         data.columns = labels
+
+        if plot: Parser._plot_workout(datta, typeName)
+        if as_csv: Parser.to_csv(data, self.fileName.split('.')[0]  + typeName + '.csv')
+        
         return data
             
-    def loadWorkOut(root):
+    def loadWorkOutSummary(self):
+        """
+        Generate a summary report on the workout, including workout type, starting time 
+        stop time, etc
+        """
         startTimes, endTimes, duration, durationUnit, activityType = [], [], [], [], []
         for r in self.tree_root.findall('Workout'):
             startTime = r.attrib['startDate']
@@ -99,8 +139,29 @@ class Parser:
             activityType.append(acttype)
             startTimes.append(startTime)
             endTimes.append(endTime)
-    labels = ['StartTime', 'EndTime', 'Duration', 'ActivityType']
-    data = pd.DataFrame(dict(list(zip(labels, [startTimes, endTimes, duration, activityType]))))
-    data.StartTime = data.StartTime.astype(str).str[:-6]
-    data.EndTime = data.EndTime.astype(str).str[:-6]
-    return data
+        labels = ['StartTime', 'EndTime', 'Duration', 'ActivityType']
+        data = pd.DataFrame(dict(list(zip(labels, [startTimes, endTimes, duration, activityType]))))
+        data.StartTime = data.StartTime.astype(str).str[:-6]
+        data.EndTime = data.EndTime.astype(str).str[:-6]
+        return data
+
+    @staticmethod
+    def to_csv(data, fileName):
+        """
+        save as csv
+        """
+        if type(data) == pd.core.frame.DataFrame:
+            data.to_csv(fileName, index = False)
+        else:
+            raise TypeError("Data has to be type pandas DataFrame")
+        
+    @staticmehtod
+    def _plot_workout(dataframe, typeName):
+        """
+        plot single workout data
+        """
+        dataframe.StartTime = pd.to_datetime(dataframe.StartTime)
+        dataframe.EndTime = pd.to_datetime(dataframe.EndTime)
+        dataframe.plot(y = typeName, x = 'StartTime')
+
+    

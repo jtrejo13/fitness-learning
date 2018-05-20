@@ -1,0 +1,32 @@
+Table of Contents 
+
+About
+
+Data - Yu Lu
+  Data Acquisition
+
+  Data Parsing
+
+  Feature selection
+
+
+Logistic Classifier - Juan
+  Data Processing
+
+  The model
+  
+  Training/Testing
+
+Watch App - Carlos
+  About
+
+  Screenshots
+
+How to Download and Run
+
+
+Tools/Requirements
+Versioning
+Authors
+License
+Acknowledgements

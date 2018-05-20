@@ -1,16 +1,20 @@
 # MyFitnessPal
-----  
+
 MyFitnessPal is a light weight Apple Watch app with real time recognition of workout categories with pre-trained machine learning algorithm. It allows exercise aficionados to track their workout without having to enter the exercise set manually.
 
 MyFitnessPal uses Core Motion from Apple's Library, to collect data from the Apple Watch accelerometer and gyroscope plus a machine learning model that can automatically categorize and log an exercise from the collected motion data. As of now, the app can identify the following traditional workouts: Elliptical, rowing machine, treadmill and pushups.
 
 ## Screenshots
 
-<img src="/res/home.jpg" alt="Home Screen"></img>
-<img src="/res/loading.jpg" alt="Loading Screen"></img>
-<img src="/res/start_stop.jpg" alt="Start or Stop Workout"></img>
-<img src="/res/pushups.jpg" alt="Pushups Example"></img>
-<img src="/res/elliptical.jpg" alt="Elliptical Example"></img>
+The following are screenshots that show exactly what the
+
+<div class="row" style="display:flex; flex-wrap: wrap; padding: 0 4px;">
+<img src="/res/loading.jpg" alt="Loading Screen" width="50" height="50"></img>
+<img src="/res/notrecording.jpg" alt="Home Screen" width="50" height="50"></img>
+<img src="/res/start_stop.jpg" alt="Start or Stop Workout" width="50" height="50"></img>
+<img src="/res/pushups.jpg" alt="Pushups Example" width="50" height="50"></img>
+<img src="/res/elliptical.jpg" alt="Elliptical Example" width="50" height="50"></img>
+</div>
 
 ## Motivation  
 While apple watch provide fitness data monitoring and analysis, it relies on users to manually input the workout category to track. It'll be much more user-friendly if apple watch could automatically detect and categorize the type of workout in the real time.

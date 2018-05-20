@@ -8,7 +8,8 @@ MyFitnessPal uses Core Motion from Apple's Library, to collect data from the App
 
 The following are screenshots that show every watch face the user will see before and during the workout.
 
-aa | bb | cc
+<img src="/res/loading.jpg" alt="Loading Screen" width="200" height="250"></img>
+ | bb | cc
 --|--|--
 ee|ff|gg
 

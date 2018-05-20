@@ -50,7 +50,8 @@ array(['HKCategoryTypeIdentifierAppleStandHour',
 ```
 
 Extract workout summary:   
-```python
+
+```
 # In: 
 par.loadWorkOutSummary()  
 # Out:
